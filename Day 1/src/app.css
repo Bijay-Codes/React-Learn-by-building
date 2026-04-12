@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.mood-proj{
+    background-color: grey;
+    margin: auto;
+    width: 40%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    border-radius: 1em;
+}
+.mood-card{
+    width: 50%;
+    aspect-ratio: 1/1;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mood-button{
+    width: 30%;
+    border-radius: 999px;
+}
+.Normal {
+    background-color: aqua;
+}
+
+.Happy {
+    background-color: greenyellow;
+}
+
+.Sad {
+    background: linear-gradient(orange, yellowgreen);
+}
+
+.Angry {
+    background-color: rgb(255, 71, 71);
+}
+
+.Calm {
+    background-color: lightblue;
+}
