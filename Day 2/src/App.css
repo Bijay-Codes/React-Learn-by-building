@@ -1,0 +1,30 @@
+.Data-div {
+    background-color: aquamarine;
+    padding: 2em;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    border-radius: 2em;
+}
+
+.split {
+    background: linear-gradient(aliceblue, lightgreen);
+    min-width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border-top: 2px solid green;
+    outline-style: groove;
+}
+
+.reset {
+    background-color: lightgreen;
+    padding: 0.5em 1.5em 0.5em 1.5em;
+    border: none;
+    border-top: 4px solid yellowgreen;
+    border-left: 8px double greenyellow;
+}

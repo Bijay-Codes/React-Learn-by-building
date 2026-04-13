@@ -18,3 +18,25 @@ Basically just change state and page LISTENS. This reRender can be a pain as wel
 In the end i couldnt even Complete the thing and well its a regret. The unused Emoji is a proof of that...
 
 Ending with a promise to come back again tomorrow and actually try to make atleast 2 things... i hope i can.
+
+Day 2 log---
+
+Fixing the Previous project from yesterday in the morning. I couldnt just leave it as it was so i woke up and fixed it before going to my institute..., at evening i have completed day 2 project as well but even then i was thinking of making atleast 2 project but couldnt get much time from assignments...
+
+Today's Build-
+This thing was built to polish my-
+1. Props/parameters being passed to components and other functions.
+(What i understood was we need to destructure the parameters being passed like this function({parameter1, parameter2}); if we are passing multiple parameters from a component like <component parameter={this} parameter2={that}/>)
+2. Connection of value of a input to a state.
+(What i need to do is pass the state as a value/parameter in the component like <component value={state} />and when we do event.target.value where event is the event being triggered target is the element that triggers the event and the value being the current value of the input.)
+
+Side Quests
+(I used to think that every negative number is a falsy value as like a truthy value like 1,true,value etc but it turns out it isn't... the falsy values are limited to only 0, -0, null, NaN, undefined, '' maybe i forgot or i just assumed that it works like that instead of actually trying to go through it to check)
+(Turns out we cant really put a Gradient color as a color of a border. I think a workaround is using ::before and ::after but a colored gradient border would be so cool and easy to implement if it existed...)
+
+Today feels a lot chill and peacefull than yesterday.
+I dont really know if i learnt anything good today. I made this fairly easily as compared to the struggle yesterday i guess i overcomplicated stuff in the previous project.
+As it is i think building this made my mental model of react and useState improved.
+
+The tomorrows goal. Make lots of stuff... like seriously tommorow is my leave i cant mess it up. Good luck me!
+Definetely coming tomorrow as well.
