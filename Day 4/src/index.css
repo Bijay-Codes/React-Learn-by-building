@@ -1,0 +1,23 @@
+@import 'tailwindcss';
+*{
+  box-sizing: border-box;
+}
+#root{
+  margin: 2em;
+  padding: 2em;
+  background-color: grey;
+  border-radius: 2rem;
+}
+.recipe-box{
+  display: flex;
+}
+
+.details{
+  text-align: left;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1em;
+}
+.reset-btn{
+  margin: auto;
+}

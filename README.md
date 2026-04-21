@@ -57,3 +57,24 @@ I think day by day the things i learnt are repeating itself shortening this jour
 
 Ending with DISSAPOINTMENT today as well... no multiple projects atp i shouldnt make promises that i cant fullfill and just work normally but i shall promise to come again tomorrow with something new to make and break. Now that i am using tailwind i will also focus on learning it side by side as a side quest but the main goal will be to learn react so if i get time i will work on tailwind.
 Lets see what tomorrow hits me with. Probably not a truck right? RIGHT!
+
+Break Notice...
+I was away for 5 or 6 days i guess. It was annoying to spend time outside my room and touch grass but what needs to be done needs to be done. I was away in hospital for those days so i couldnt code for those day but lets continue from now on.
+
+Day 4 log---
+Well its kind of suprising that i finished this project pretty easily which means i need to increase the difficulty but that doesnt mean i didnt struggle on things... Lets see
+
+1. Today i found out i cant actually use if else statements inside a components return scope or () block which is kind of confusing why? let me google it XD. Okay so i get it now that since if else is a statement that doesnt return any value and its counterpart the turnary operator does. So in simple words jsx expects only values or expressions in the return block.
+
+2. Okay so Using crypto.randomUUID is not really a good thing if we plan to scale a project. since its not even a fixed one. i thought it just runs one time and stores the id inside the variable but apparently it runs every time we reload the page which creates inconsistent data and since id is a very crucial thing when we give it to something it must be a fixed thing that doesnt change. probably in a string format or whatever, it just needs to be unique and reilable.
+
+3. Noticed i was prop drilling again today... i will be sure to useContext in my project when i feel like im fed up with the props going here and there and drilling it like a bolts in my functions.
+
+4. Okay this one is Very simmilar thing that i missed which is using the method .every or .some both of them do the pretty much the same thing but i used the .every since it sounds like more strict and more reliable but the only difference is .some checks if atleast 1 of the condition is true but every checks more strictly?
+
+5. I learnt that if we put a value/state inside a function as a parameter of a function it makes react fetch the actual data which the state has instead of guessing what the state hold. In Accurate terms its like, when we update a state it doesnt change the state at the same time it waits till its render cycle to render/change the data in the state and if we try to access the state within that delay window we might get old data but when we put the state as a parameter react goes to the state and takes the actual current data which is stored in the state and puts it as a parameter we can use in the function.
+
+SideQuest update [
+  1. Apparently using Tailwindcss doesnt mean we cant style elements normally we can combine both ways using classnames/ids as well as tailwind classes.
+  2. I thought that number they put inside p-4/m-4 etc is actually a 4em? no but it was 4rem and which means each rem means 4px so m-4 means 16px.
+]
