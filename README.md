@@ -74,6 +74,8 @@ Well its kind of suprising that i finished this project pretty easily which mean
 
 5. I learnt that if we put a value/state inside a function as a parameter of a function it makes react fetch the actual data which the state has instead of guessing what the state hold. In Accurate terms its like, when we update a state it doesnt change the state at the same time it waits till its render cycle to render/change the data in the state and if we try to access the state within that delay window we might get old data but when we put the state as a parameter react goes to the state and takes the actual current data which is stored in the state and puts it as a parameter we can use in the function.
 
+I waill be working on my projects as of now and this repo shows the 1st week of me using react. As of now if i am not actively working on a project i will be contributing here or if im working on a project i am going to keep adding to this README file about my experinces and what i learnt.
+
 SideQuest update [
   1. Apparently using Tailwindcss doesnt mean we cant style elements normally we can combine both ways using classnames/ids as well as tailwind classes.
   2. I thought that number they put inside p-4/m-4 etc is actually a 4em? no but it was 4rem and which means each rem means 4px so m-4 means 16px.
