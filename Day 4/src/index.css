@@ -1,23 +1,32 @@
 @import 'tailwindcss';
-*{
-  box-sizing: border-box;
-}
-#root{
-  margin: 2em;
-  padding: 2em;
-  background-color: grey;
-  border-radius: 2rem;
-}
-.recipe-box{
-  display: flex;
+
+:root {
+  --page-bg: oklch(0.1831 0.0309 263.3831);
+  --page-fg: oklch(0.9842 0.0034 247.8578);
+  --surface-bg: oklch(0.2441 0.0393 262.5897);
+  --surface-fg: oklch(0.9288 0.0126 255.5079);
+  --surface-muted-bg: oklch(0.3146 0.0424 258.2988);
+  --surface-muted-fg: oklch(0.869 0.0198 252.8943);
+  --primary-bg: oklch(0.7137 0.1434 254.624);
+  --primary-fg: oklch(0.1756 0.0286 255.6434);
+  --secondary-bg: oklch(0.7107 0.0351 256.7878);
+  --secondary-fg: oklch(0.2077 0.0398 265.7549);
+  --accent-bg: oklch(0.8651 0.1153 207.0778);
+  --accent-fg: oklch(0.3018 0.0541 229.6954);
+  --success-color: oklch(0.8003 0.1821 151.711);
+  --success-fg: oklch(0.2664 0.0628 152.9343);
+  --warning-color: oklch(0.8369 0.1644 84.4286);
+  --warning-fg: oklch(0.2791 0.0742 45.6352);
+  --danger-color: oklch(0.7106 0.1661 22.2162);
+  --danger-fg: oklch(0.2575 0.0886 26.0418);
 }
 
-.details{
-  text-align: left;
-  display: flex;
-  flex-flow: column wrap;
-  gap: 1em;
+body {
+  background: var(--page-bg);
+  color: var(--page-fg);
+  transition: all 0.3s ease-in-out;
 }
-.reset-btn{
-  margin: auto;
+
+#root {
+  padding: 1rem 2rem;
 }

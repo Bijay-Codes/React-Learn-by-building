@@ -4,23 +4,35 @@ export default function App() {
     const [friends, setFriends] = useState([]);
     const [text, setText] = useState('');
     return (
-        <div className="m-auto bg-green-200 w-1/1 aspect-square text-grey-900 flex flex-col justify-start items-center p-4 rounded-lg">
-            <StatusPane friends={friends} />
-            <AddFriendPane setFunction={setFriends} prev={friends} text={text} setText={setText} />
-            <div className="flex-wrap justify-center gap-4">{
-                friends.map(friend => {
-                    return <FriendList key={friend.id} setFunction={setFriends} friends={friends} friendState={friend} id={friend.id} />
-                })
-            }</div>
-        </div>
+        <main className="bg-(--page-bg) h-screen p-4">
+            <div className="m-auto bg-(--surface-bg) max-w-300 text-grey-900 gap-6 flex flex-col justify-start items-center p-6 rounded-lg">
+                <AddFriendPane setFunction={setFriends} prev={friends} text={text} setText={setText} />
+                <div className="bg-(--surface-muted-bg) w-full max-w-[80%] min-h-40 flex flex-col items-center rounded-2xl border border-(--accent-bg)/20">
+                    <StatusPane friends={friends} />
+                    <div className="flex flex-col w-fit p-4 gap-4 self-start">{
+                        friends.map(friend => {
+                            return <FriendList key={friend.id}
+                                setFunction={setFriends}
+                                friends={friends}
+                                friendState={friend}
+                                id={friend.id} />
+                        })
+                    }
+                    </div>
+                </div>
+            </div>
+        </main>
     )
 }
 
 function StatusPane({ friends }) {
     return (
-        <div className="bg-green-400 m-4 flex flex-row gap-4 whitespace-nowrap rounded-lg p-4">
-            <span className="bg-blue-200  border-t-3 border-blue-600 rounded-lg px-4 box-border">{friends.length === 0 ? 'Total Friends- ' + 0 : 'Total Friends- ' + friends.length}</span>
-            <span className="bg-fuchsia-200 border-t-3 border-fuchsia-500 rounded-lg px-4  box-border">{countClose(friends)}</span>
+        <div className="flex gap-6 items-start p-4 w-fit max-w-300 max-h-200">
+            <span className="p-2 bg-(--primary-bg) text-(--primary-fg) rounded-lg px-4">
+                {friends.length === 0 ? 'Total Friends- ' + 0 : 'Total Friends- ' + friends.length}</span>
+            <span className="p-2 bg-(--accent-bg) text-(--accent-fg) rounded-lg px-4">
+                {countClose(friends)}
+            </span>
         </div>
     )
 }
@@ -28,19 +40,23 @@ function StatusPane({ friends }) {
 function AddFriendPane({ setFunction, prev, text, setText }) {
     return (
         <div className="flex gap-2 p-1">
-            <input className="bg-green-300 border-t rounded-lg" value={text} type="text" placeholder="Name-" onChange={(e) => { setText(e.target.value) }} />
-            <button className="bg-blue-100 rounded-full py-1 px-4" onClick={() => addToList(setFunction, prev, setText, text)}>Add to List</button>
+            <input className="bg-(--secondary-bg) text-(--secondary-fg) border-t rounded-lg p-3"
+                value={text}
+                type="text"
+                placeholder="Name- meaw?"
+                onChange={(e) => { setText(e.target.value) }} />
+            <button className="bg-(--primary-bg)/80 text-(--primary-fg) rounded py-1 px-4" onClick={() => addToList(setFunction, prev, setText, text)}>Add to List</button>
         </div>
     )
 }
 
 function FriendList({ friends, setFunction, friendState, id }) {
     return (
-        <div className="flex justify-center items-center m-3">
-            <span className={`capitalize ${friendState.isClose ? 'text-fuchsia-500' : 'text-blue-600'}`}>{friendState.name}</span>
-            <input className={`w-4 ,aspect-1/1 ${friendState.isClose ? 'accent-fuchsia-600' : 'accent-cyan-300'}`} type="checkbox" id={`check${id}`} onChange={() => handleCheck(friends, setFunction, id)} />
-            {friendState.isClose ? '<--' : <label className="text-blue-500" htmlFor={`check${id}`}>Close Friend?</label>}
-            <button className="bg-red-300 rounded-lg px-2 py-1 border-t" onClick={() => handleRemove(friends, id, setFunction)} >Remove</button>
+        <div className="flex justify-center items-center gap-4 bg-(--surface-bg) p-4 rounded-xl text-(--surface-fg)">
+            <span className={`capitalize ${friendState.isClose ? 'text-(--accent-bg)' : ''}`}>{friendState.name}</span>
+            <input className={`w-4 ,aspect-1/1 ${friendState.isClose ? 'accent-(--accent-bg)' : 'accent-cyan-300'}`} type="checkbox" id={`check${id}`} onChange={() => handleCheck(friends, setFunction, id)} />
+            {friendState.isClose ? <label htmlFor={`check${id}`}>is Close</label> : <label htmlFor={`check${id}`}>Mark Close</label>}
+            <button className="bg-(--danger-color) text-(--danger-fg) rounded-lg px-2 py-1 border-t" onClick={() => handleRemove(friends, id, setFunction)} >Remove</button>
         </div >
     )
 }
